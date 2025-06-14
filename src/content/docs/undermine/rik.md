@@ -1,0 +1,112 @@
+---
+title: "RikA"
+description: content
+sidebar:
+  label: Rik Reverb
+  order: 3
+tableOfContents:
+  minHeadingLevel: 1
+  maxHeadingLevel: 2
+editUrl: true
+lastUpdated: true
+banner:
+  content: |
+    contentses
+---
+
+# Rik Reverb - Heroic Raid Leader Guide
+
+## Boss Overview
+
+**Fight Style:** Single boss with Sonic Amplifier management  
+**Phases:** Main phase with intermissions (avoid 3rd = enrage)  
+**Bloodlust:** On pull  
+**Core Mechanic:** Sonic Amplifiers drain rotation
+
+## Complete Ability List
+
+### Sonic Blast (Tank Mechanic)
+
+- **Effect:** Frontal cone + Tinnitus debuff (100% damage increase, stacking)
+- **Tank Swap:** After 5 stacks of Tinnitus
+- **Positioning:** Face away from raid
+
+### Amplification (Core Mechanic)
+
+- **Spawns:** 2 Sonic Amplifiers every 30-40 seconds
+- **Raid Damage:** 477,950 Sonic damage every 2s per amplifier (+25% per additional)
+- **🔴 HEROIC: Lingering Voltage:** 100% increased drain damage for 45s (prevents same person draining repeatedly)
+
+### 🔴 HEROIC: Pyrotechnics (Explosive Barrels)
+
+- **Timer:** 15 seconds to kill before massive explosion
+- **Buff:** Attacking barrels gives Excitement (+10% speed, +2% haste, stacks 3x)
+- **Priority:** Immediate when spawned
+- **Assignment:** All ranged DPS
+
+## Intermission - Hype Hustle
+
+- **Trigger:** Boss reaches 100 energy
+- **Blaring Drop:** 4.2M damage expanding rings (LETHAL)
+- **Survival:** Use amplifier knockback to avoid rings
+- **Duration:** ~20 seconds
+- **🔴 Third intermission = ENRAGE**
+
+## Role Assignments
+
+### Tank Strategy
+
+- **Primary Tank:** Face boss away, track Tinnitus stacks
+- **Off Tank:** Can solo drain amplifiers while not tanking
+- **Swap:** At 5 Tinnitus stacks
+
+### Amplifier Draining System
+
+- **2-person rotation** per amplifier required on Heroic
+- **Tanks:** Can solo amplifiers while off-tanking
+- **Coordination:** Prevent Lingering Voltage overlap
+- **Assignment Example:**
+  - North Amplifier: Melee 1 → Melee 2 → Tank (repeat)
+  - South Amplifier: Ranged 1 → Ranged 2 → Healer (repeat)
+
+### DPS Priorities
+
+1. **🔴 HEROIC: Pyrotechnics** (Explosive Barrels) - Immediate
+2. Boss damage (avoid 3rd intermission)
+3. Amplifier draining rotation
+
+### Healer Considerations
+
+- **Constant raid damage** from active amplifiers
+- **Spike damage** during barrel explosions
+- **Cooldowns:** Save for high amplifier counts
+
+## Critical Raid Leader Callouts
+
+- **"BARRELS UP - All ranged swap to barrels NOW"**
+- **"[Name] drain north amplifier, [Name] drain south"**
+- **"Intermission starting - move to amplifiers"**
+- **"Ring expanding - use knockback NOW"**
+- **"Tinnitus at 5 - TANK SWAP"**
+
+## Positioning
+
+```
+    [Boss]
+      ↑
+   [Tanks]
+      |
+  [Melee]
+      |
+ [Ranged]
+     / \
+[Amp 1] [Amp 2]
+```
+
+## Common Mistakes to Avoid
+
+1. Not killing Pyrotechnics barrels fast enough
+2. Same person draining amplifiers (Lingering Voltage)
+3. Missing intermission knockback timing
+4. Allowing 3rd intermission (enrage)
+5. Tank not facing boss away during Sonic Blast

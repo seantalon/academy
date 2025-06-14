@@ -1,0 +1,150 @@
+---
+title: "sp0ocket"
+description: content
+sidebar:
+  label: Sprocketmonger Lockenstock
+  order: 5
+tableOfContents:
+  minHeadingLevel: 1
+  maxHeadingLevel: 2
+editUrl: false
+lastUpdated: false
+banner:
+  content: |
+    contentses
+---
+
+# Sprocketmonger Lockenstock - Heroic Raid Leader Guide
+
+## Boss Overview
+
+**Fight Style:** Conveyor belt arena with invention phases  
+**Arena:** 4 segments, 2 electrified at any time  
+**Core Mechanic:** Invention rotation with intermissions at 100 energy
+**Bloodlust:** After first intermission or on pull
+
+## Arena Mechanics
+
+### Conveyor Belt System
+
+- **Segments:** 4 total, 2 electrified (deadly) at once
+- **Movement:** Constant repositioning required
+- **Safe Zones:** Gray segments only
+- **Pattern:** Electrified zones rotate every 30s
+- **🔴 HEROIC:** Faster belt rotation (20s)
+
+### Zone Identification
+
+```
+[1][2][3][4]
+ G  E  E  G
+
+G = Gray (Safe)
+E = Electrified (Deadly)
+```
+
+## Invention Abilities
+
+### Blazing Beams
+
+- **Pattern:** Line attacks across entire arena
+- **Warning:** 3-second cast time
+- **Safe spots:** Between beam lines
+- **🔴 HEROIC:** Additional diagonal beams
+
+### Rocket Barrage
+
+- **Targets:** 5 random players
+- **Damage:** High burst + knockback
+- **Counter:** Stack for healing efficiency
+- **🔴 HEROIC:** 8 targets instead of 5
+
+### Mega Magnetize
+
+- **Effect:** Pulls all players toward boss
+- **Danger:** Can pull into electrified zones
+- **Counter:** Pre-position away from boss
+- **Tank note:** Use defensive during pull
+
+### 🔴 HEROIC: Foot-Blaster Bombs
+
+- **Spawn:** During every intermission
+- **Timer:** 15 seconds to destruction
+- **Priority:** Must clear before resuming boss
+- **Assignment:** Ranged DPS focus
+
+## Intermission Mechanics (100 Energy)
+
+1. **Knockback:** All players launched to edges
+2. **Empowered Inventions:** Abilities cover larger areas
+3. **🔴 HEROIC:** Foot-Blaster Bombs spawn
+4. **Duration:** ~20 seconds
+5. **Resumption:** Boss vulnerable after inventions
+
+## Tank Strategy
+
+- **Positioning:** Always in safe zones
+- **Tank Swap:** On Gravi-Gunk stacks (3-4)
+- **Cooldowns:** Pyro Party Pack requires major defensive
+- **Movement:** Lead boss during zone transitions
+
+### Gravi-Gunk Debuff
+
+- **Stacks:** Applied by melee attacks
+- **Effect:** Slowing + damage increase
+- **Swap point:** 3-4 stacks
+- **Duration:** 30 seconds
+
+## Role Assignments
+
+### DPS Priorities
+
+1. **Boss damage** during safe windows
+2. **🔴 Foot-Blaster Bombs** immediately in intermission
+3. **Electro-Shock Mines** when spawned
+4. **Movement discipline** for zone transitions
+
+### Healer Considerations
+
+- **Raid damage:** Spikes during Rocket Barrage
+- **Movement healing:** Maintain output while dodging
+- **Cooldowns:** Save for empowered abilities
+- **Positioning:** Central safe zones preferred
+
+## Critical Raid Leader Callouts
+
+- **"Zones shifting in 5 - move to 1 and 4!"**
+- **"Intermission incoming - spread for knockback"**
+- **"BOMBS FIRST - all ranged on bombs!"** (🔴 heroic)
+- **"Beams casting - find safe spots"**
+- **"Tank swap at 3 stacks"**
+
+## Movement Strategy
+
+### Pre-Intermission
+
+- Keep raid loosely stacked in safe zones
+- Tanks position boss for easy transitions
+- Maintain 5-yard minimum spread
+
+### Post-Intermission
+
+- Clear bombs before engaging boss
+- Reform in new safe zones
+- Resume normal positioning
+
+## Common Mistakes to Avoid
+
+1. Standing in electrified zones during transitions
+2. Not prioritizing Foot-Blaster Bombs
+3. Getting pulled into bad zones by Magnetize
+4. Poor positioning for beam patterns
+5. Tank not moving boss during zone shifts
+
+## Tips for Success
+
+- Use raid markers for zone identification
+- Assign bomb teams for intermissions
+- Practice zone transition callouts
+- Keep boss centered when possible
+- Save movement abilities for emergencies

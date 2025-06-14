@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'My DnD Academia',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
@@ -14,12 +14,21 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
+						{
+							label: 'Raids', items: [{
+								label: 'Liberation of Undermine',
+								autogenerate: { directory: 'undermine' },
+							}],
+						},
+
 					],
 				},
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+
+
 			],
 		}),
 	],

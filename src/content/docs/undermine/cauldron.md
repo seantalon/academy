@@ -1,0 +1,99 @@
+---
+title: "COC"
+description: content
+sidebar:
+  label: Cauldron of Carnage
+  order: 2
+tableOfContents:
+  minHeadingLevel: 1
+  maxHeadingLevel: 2
+editUrl: false
+lastUpdated: false
+banner:
+  content: |
+    contentses
+---
+
+# Cauldron of Carnage (Torq & Flarendo) - Heroic Raid Leader Guide
+
+## Boss Overview
+
+**Fight Style:** Twin boss encounter with mandatory positioning  
+**Phases:** Single phase with intermissions at 100 energy  
+**Bloodlust:** On pull  
+**Key Requirement:** Both bosses must die simultaneously
+
+## Positioning Strategy
+
+- **Separation:** Bosses must be 40+ yards apart or become immune
+- **Group Split:** Divide raid into two equal groups
+- **Side Assignment:** Torq (left) vs Flarendo (right)
+
+## Boss-Specific Mechanics
+
+### Torq the Tempest (Lightning Boss)
+
+- **Static Charge:** Movement fills energy bar - full bar = 6s stun
+- **Thunderdrum Salvo:** Missiles at player locations
+- **🔴 HEROIC: Voltaic Images:** Shadow adds that fixate and explode
+- **Lightning Bash:** Tankbuster with knockup
+
+### Flarendo the Furious (Fire Boss)
+
+- **Scrapbomb:** Group soak mechanic (4+ players required)
+- **Blistering Spite:** Stacking fire DoT within 60 yards
+- **🔴 HEROIC: Molten Phlegm:** AoE damage + healing absorb
+- **Blastburn Roarcannon:** Frontal beam on fixated player
+
+## Intermission - Colossal Clash (100 Energy)
+
+- **Trigger:** Both bosses reach 100 energy
+- **Effect:** Massive raid damage if not positioned correctly
+- **Response:** All players move to center, then swap sides
+- **Tank Swap:** Required after each Clash
+
+## Tank Strategy
+
+- **Separate tanks** for each boss (never tank both)
+- **Tank swap** after each Colossal Clash (intermission)
+- **Torq Tank:** Minimize movement to avoid Static Charge
+- **Flarendo Tank:** Position for Scrapbomb soaking
+
+## Healer Assignments
+
+- **Split healing teams** between both sides
+- **Cooldown rotation** for Colossal Clash
+- **🔴 HEROIC:** Extra healing for Molten Phlegm absorbs
+- **Dispels:** Priority on high Static Charge stacks
+
+## DPS Priorities
+
+1. **🔴 HEROIC: Voltaic Images** - CC and kill immediately
+2. **Equal boss damage** - must die together
+3. **Scrapbomb soaking** - assigned groups
+4. **Movement discipline** on Torq side
+
+## Critical Raid Leader Callouts
+
+- **"CLASH INCOMING - MOVE TO CENTER"** (100 energy)
+- **"SWAP SIDES NOW"** (post-intermission)
+- **"VOLTAIC IMAGES - CC AND KILL"** (🔴 heroic)
+- **"SOAK SCRAPBOMB - GROUP UP"**
+- **"STATIC BAR HIGH - MINIMIZE MOVEMENT"**
+
+## Group Assignments
+
+```
+Left Side (Torq)          Right Side (Flarendo)
+- Tank 1                  - Tank 2
+- Healer 1-2             - Healer 3-4
+- DPS Group 1            - DPS Group 2
+```
+
+## Common Mistakes to Avoid
+
+1. Bosses too close together (immunity)
+2. Uneven boss health (can't kill simultaneously)
+3. Missing Scrapbomb soaks
+4. Excessive movement on Torq side
+5. Not swapping sides after Colossal Clash
