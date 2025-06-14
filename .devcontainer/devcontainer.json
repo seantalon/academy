@@ -1,0 +1,39 @@
+{
+    "name": "Starlight Raid Guides",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "astro-build.astro-vscode",
+                "bradlc.vscode-tailwindcss",
+                "esbenp.prettier-vscode"
+            ],
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true
+            }
+        },
+        "codespaces": {
+            "openFiles": [
+                "README.md",
+                "src/content/docs/index.mdx"
+            ]
+        }
+    },
+    "forwardPorts": [
+        4321
+    ],
+    "portsAttributes": {
+        "4321": {
+            "label": "Starlight Dev Server",
+            "onAutoForward": "openPreview",
+            "visibility": "public"
+        }
+    },
+    "postCreateCommand": "npm install",
+    "postStartCommand": "npm run dev -- --host 0.0.0.0",
+    "remoteUser": "node"
+}
