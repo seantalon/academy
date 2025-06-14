@@ -14,7 +14,7 @@ banner:
     contentses
 ---
 
-# Vexie Fullthrottle and the Geargrinders - Heroic Raid Leader Guide
+# Vexie Fullthrottle and the Geargrinder - Heroic Raid Leader Guide
 
 ## Boss Overview
 
