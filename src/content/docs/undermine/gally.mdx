@@ -1,0 +1,390 @@
+---
+title: "gallie"
+description: content
+sidebar:
+  label: Chrome King Gallywix
+  order: 8
+  badge: 
+    text: "Final Boss"
+    variant: "danger"
+tableOfContents:
+  minHeadingLevel: 1
+  maxHeadingLevel: 2
+editUrl: false
+lastUpdated: false
+banner:
+  content: |
+    GALLOWACKS
+---
+
+import { Card, CardGrid, Tabs, TabItem, Badge, Steps, Aside, FileTree, Icon } from '@astrojs/starlight/components';
+
+# Chrome King Gallywix (Final Boss) - Heroic Raid Leader Guide
+
+<CardGrid>
+<Card title="Fight Overview" icon="information">
+**Style:** 3-phase encounter  
+**Duration:** 8-10 minutes  
+**Positioning:** Melee range required  
+**Bloodlust:** Phase 3 or intermission
+</Card>
+
+<Card title="Key Mechanics" icon="warning">
+**Tank Swaps:** Every 8-9 stacks  
+**Heroic Addition:** Dude Bombs  
+**Critical:** Stay in melee range  
+**Intermission:** Shield + Adds
+</Card>
+</CardGrid>
+
+:::tip[Raid Leader Tip]
+This fight heavily punishes ranged positioning - damage increases dramatically with distance from the boss. Keep everyone stacked in melee!
+:::
+
+## Phase 1 - Main Engagement (100-50%)
+
+### <Icon name="approve-check" /> Trick Shots (Tank Mechanic)
+
+<Steps>
+1. **Stack Accumulation**: Tanks gain stacks every 4 seconds
+2. **Monitor Stacks**: Watch for 8-9 stack threshold
+3. **Execute Swap**: Taunt before reaching 10 stacks
+4. **Position Away**: Face boss away from raid during swap
+</Steps>
+
+<Tabs>
+  <TabItem label="Normal Mode" icon="approve-check">
+    - Stacks every 4 seconds
+    - Swap at 8-9 stacks
+    - Face away from raid
+    - No persistent effects
+  </TabItem>
+  <TabItem label="Heroic Mode" icon="warning">
+    - <Badge text="NEW" variant="danger" /> **Persistent fire zones** left behind
+    - Same swap timing (8-9 stacks)
+    - Requires positioning coordination
+    - Fire zones last entire fight
+  </TabItem>
+</Tabs>
+
+:::caution[Critical Warning]
+**NEVER** let tanks reach 10 stacks! The cone damage at 10 stacks will likely kill multiple raid members.
+:::
+
+### <Icon name="rocket" /> Giga Coils
+
+- **Trigger:** Boss reaches 100 energy
+- **Effect:** Spawns electric coils around room
+- **Damage:** Pulsing AoE from each coil
+- **Duration:** Until destroyed
+- **Priority:** <Badge text="HIGH" variant="tip" /> Ranged DPS focus
+
+### <Icon name="external" /> Scatterblast Canisters
+
+<CardGrid>
+<CardGrid>
+<Card title="Targeting" icon="magnifier">
+**Targets:** 3-5 random players  
+**Effect:** Large AoE explosion  
+**Debuff:** Healing absorption shield
+</Card>
+
+<Card title="Heroic Changes" icon="warning">
+<Badge text="HEROIC" variant="danger" /> **Larger explosion radius**  
+Requires more spread distance  
+Pre-position at max melee range
+</Card>
+</CardGrid>
+</CardGrid>
+
+### <Icon name="approve-check-circle" /> <Badge text="HEROIC ONLY" variant="danger" /> 1500-Pound Dude Bomb
+
+<Aside type="danger" title="Raid Wipe Mechanic">
+**Frequency:** Every 60 seconds  
+**Mechanic:** Tank must interact to defuse  
+**Timer:** 10 seconds to explosion  
+**Failure:** Raid-wide lethal damage
+</Aside>
+
+<Steps>
+1. **Bomb Spawns**: Look for visual indicator
+2. **Off-Tank Response**: Immediately move to bomb location
+3. **Interact**: Click/interact with bomb object
+4. **Timing**: Must be completed within 10 seconds
+</Steps>
+
+## Intermission - Shield Phase (50%)
+
+### Shield Mechanics Overview
+
+<Card title="Shield Phase Details" icon="setting">
+**HP:** 30% of boss health  
+**Duration:** Until shield broken  
+**Boss State:** Immune to damage  
+**Add Spawns:** Continuous until phase ends
+</Card>
+
+### <Icon name="list-format" /> Add Priority (Kill Order)
+
+<Steps>
+1. **Darkfuse Technicians** - Crash mechanic near boss <Badge text="PRIORITY 1" variant="danger" />
+2. **Overcharged Sentries** - 4-second beam casts <Badge text="INTERRUPT" variant="caution" />
+3. **Wrenchmongers** - High melee damage <Badge text="TANK" variant="note" />
+4. **Shield** - All remaining DPS when adds are clear
+</Steps>
+
+### Positioning Strategy
+
+<FileTree>
+- Boss Position (Center)
+  - Crash Zone (Marked)
+    - Safe Zone for Technicians
+  - Raid Stack Point
+    - Melee DPS
+    - Ranged DPS
+    - Healers
+</FileTree>
+
+<Tabs>
+  <TabItem label="Tanks" icon="approve-check">
+    - Pick up Wrenchmongers immediately
+    - Position near designated crash zone
+    - Use personal cooldowns for add damage
+    - Keep adds away from raid
+  </TabItem>
+  <TabItem label="DPS" icon="rocket">
+    - Focus Technicians first (crash them safely)
+    - Interrupt Sentries on cooldown
+    - Switch to Wrenchmongers when available
+    - Burn shield when adds are clear
+  </TabItem>
+  <TabItem label="Healers" icon="heart">
+    - Focus on tank healing during add phase
+    - Dispel priority targets
+    - Coordinate cooldowns for heavy damage
+    - Prepare for Phase 3 transition
+  </TabItem>
+</Tabs>
+
+## Phase 3 - Execute Phase (50-0%)
+
+:::tip[Phase 3 Strategy]
+This is a burn phase! Ignore most mechanics and tunnel the boss. Save battle resurrections for this phase.
+:::
+
+### <Icon name="warning" /> Wholesale Slaughter
+
+<Card title="Execution Mechanic" icon="warning">
+**Type:** Raid-wide channel  
+**Damage:** Increasing per tick  
+**Duration:** Extends with each cast  
+**Counter:** <Badge text="BURN BOSS" variant="tip" size="large" />
+</Card>
+
+### Enhanced Mechanics
+
+<CardGrid stagger>
+<Card title="Damage Increase" icon="up-arrow">
+All abilities deal **30% more damage**  
+Faster Trick Shot stack accumulation  
+More frequent ability casts
+</Card>
+
+<Card title="Heroic Additions" icon="warning">
+<Badge text="HEROIC" variant="danger" /> **Double Dude Bombs**  
+Both tanks may need to handle bombs  
+Requires precise coordination
+</Card>
+
+<Card title="Positioning" icon="magnifier">
+**Giga Coils spawn in pairs**  
+Reduced safe space  
+Stay mobile but remain in melee
+</Card>
+</CardGrid>
+
+## Role-Specific Strategies
+
+<Tabs syncKey="role-guides">
+  <TabItem label="Tank Strategy" icon="approve-check">
+    ### Phase 1 & 3
+    - **Positioning:** Always melee range - never back away
+    - **Swaps:** Clean swaps at 8-9 Trick Shot stacks
+    - **Bomb Duty:** Off-tank handles all Dude Bombs <Badge text="HEROIC" variant="danger" />
+    - **Cooldowns:** Rotate defensives for each swap
+
+    ### Intermission
+    - **Add Control:** Pick up Wrenchmongers immediately
+    - **Positioning:** Near designated crash zone for Technicians
+    - **Survival:** Use personal cooldowns liberally
+    - **Communication:** Call out add spawns
+  </TabItem>
+  
+  <TabItem label="Healer Priorities" icon="heart">
+    ### Healing Priority Order
+    1. **Tank healing during Trick Shots**
+    2. **Raid healing for Scatterblast explosions**
+    3. **Absorb shield removal** (priority dispels)
+    4. **Phase 3 Slaughter channels**
+
+    ### Cooldown Usage
+    - **Phase 1:** Conserve major cooldowns
+    - **Intermission:** Use as needed for add damage
+    - **Phase 3:** Rotate all major healing cooldowns
+    
+    :::tip[Healer Tip]
+    Stack healing cooldowns during Wholesale Slaughter - the damage ramps up quickly!
+    :::
+  </TabItem>
+  
+  <TabItem label="DPS Responsibilities" icon="rocket">
+    ### Target Priority by Phase
+
+    **Phase 1:** 
+    - Primary: Boss damage
+    - Secondary: Giga Coils when they spawn
+    - Positioning: Maximum melee range for Scatterblast
+
+    **Intermission:**
+    - <Badge text="1" variant="danger" /> Darkfuse Technicians
+    - <Badge text="2" variant="caution" /> Overcharged Sentries (interrupt!)
+    - <Badge text="3" variant="note" /> Wrenchmongers
+    - <Badge text="4" variant="tip" /> Shield (when adds clear)
+
+    **Phase 3:**
+    - **TUNNEL BOSS** - ignore most other mechanics
+    - Use all damage cooldowns
+    - <Badge text="HEROIC" variant="danger" /> Help spot/call Dude Bombs
+
+    :::caution[DPS Warning]
+    In Phase 3, resist the urge to target adds - the boss must die quickly before Slaughter becomes unhealable.
+    :::
+  </TabItem>
+</Tabs>
+
+## Critical Raid Leader Callouts
+
+<Tabs syncKey="callout-guides">
+  <TabItem label="Phase 1 Callouts" icon="comment">
+    ### Essential Voice Commands
+    
+    <Steps>
+    1. **"Two groups, opposite sides of room!"** - Initial positioning
+    2. **"Taunt at 8-9 stacks, not 10!"** - Tank swap timing
+    3. **"Bomb spawned - [Tank name] interact!"** - <Badge text="HEROIC" variant="danger" /> Dude Bomb
+    4. **"Spread for Scatterblast!"** - AoE incoming
+    5. **"Coils up - ranged swap now!"** - Target priority change
+    </Steps>
+  </TabItem>
+  
+  <TabItem label="Intermission Callouts" icon="bars">
+    ### Add Phase Commands
+    
+    - **"Shield phase - adds priority!"**
+    - **"Technicians first - crash them center!"**
+    - **"Interrupt Sentries!"**
+    - **"All DPS on shield when adds clear!"**
+    - **"30% left on shield - prepare for Phase 3!"**
+  </TabItem>
+  
+  <TabItem label="Phase 3 Callouts" icon="warning">
+    ### Execute Phase Commands
+    
+    - **"Execute phase - burn boss!"**
+    - **"Slaughter channel - healing CDs!"**
+    - **"Double bombs - both tanks ready!"** <Badge text="HEROIC" variant="danger" />
+    - **"Ignore adds - tunnel boss!"**
+    - **"Battle res available - use them!"**
+  </TabItem>
+</Tabs>
+
+## Common Mistakes to Avoid
+
+<CardGrid>
+<Card title="Positioning Errors" icon="warning">
+<Badge text="FATAL" variant="danger" /> Tanking at range  
+Massive damage increase with distance  
+**Always stay in melee range**
+</Card>
+
+<Card title="Tank Swap Timing" icon="warning">
+<Badge text="WIPE" variant="danger" /> Swapping at 10 stacks  
+Cone damage hits entire raid  
+**Swap at 8-9 stacks maximum**
+</Card>
+
+<Card title="Heroic Bomb Failure" icon="warning">
+<Badge text="HEROIC" variant="danger" /> Missing Dude Bomb interaction  
+10-second timer = raid wipe  
+**Off-tank must be ready**
+</Card>
+
+<Card title="Add Priority Confusion" icon="warning">
+Wrong kill order in intermission  
+Technicians crash = raid damage  
+**Follow priority: Tech > Sentry > Wrench**
+</Card>
+</CardGrid>
+
+## Tips for Success
+
+<Aside type="tip" title="Pro Tips">
+- **Mark crash zone** for Technicians with world marker
+- **Assign interrupt rotation** for Sentries (4-second cast)
+- **Pre-position for Scatterblast** spreads at max melee
+- **Use voice countdown** for tank swaps (3-2-1-TAUNT)
+- **Save battle resurrections** for Phase 3 exclusively
+</Aside>
+
+### Recommended Addons
+
+<Steps>
+1. **WeakAuras** - Track Trick Shot stacks and Dude Bomb timers
+2. **DBM/BigWigs** - Essential for ability timers and warnings  
+3. **Details!** - Monitor positioning and damage taken
+4. **Method Raid Tools** - Coordinate cooldowns and assignments
+</Steps>
+
+## <Badge text="HEROIC" variant="danger" /> Heroic-Specific Notes
+
+:::caution[Heroic Additions]
+The heroic version adds several mechanics that significantly increase difficulty:
+:::
+
+<CardGrid>
+  <Card title="Fire Zones" icon="warning">
+    **Trick Shots leave persistent fire zones**  
+    Plan tank positioning carefully  
+    Fire persists for entire encounter
+  </Card>
+  
+  <Card title="Dude Bombs" icon="warning">
+    **1500-Pound bombs require interaction**  
+    10-second timer to defuse  
+    Assign dedicated off-tank role
+  </Card>
+  
+  <Card title="Larger AoEs" icon="warning">
+    **Scatterblast has increased radius**  
+    Requires more spread distance  
+    Position at maximum melee range
+  </Card>
+  
+  <Card title="Phase 3 Doubles" icon="warning">
+    **Double bombs in execute phase**  
+    Both tanks may need bomb duty  
+    Consider 3-tank strategy for progression
+  </Card>
+</CardGrid>
+
+### Heroic Progression Strategy
+
+<Aside type="note" title="3-Tank Consideration">
+For progression teams, consider bringing a third tank to handle the increased complexity of double Dude Bombs in Phase 3. This provides redundancy and reduces coordination requirements.
+</Aside>
+
+**Loot:** <Badge text="ilvl 639" variant="tip" /> • **Mount Drop:** <Badge text="0.5%" variant="caution" /> • **Achievement:** <Badge text="Ahead of the Curve" variant="success" />
+
+---
+
+*Good luck, and may the loot be ever in your favor!* <Icon name="star" />
