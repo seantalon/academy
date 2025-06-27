@@ -1,0 +1,51 @@
+name: Deploy Starlight Development
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "2"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy with PM2 (Development)
+        run: |
+          # Create logs directory if it doesn't exist
+          mkdir -p logs
+
+          # Deploy using ecosystem file in development mode
+          pm2 startOrReload ecosystem.config.js --env development --update-env
+
+          # Save PM2 configuration
+          pm2 save
+
+      - name: Verify deployment
+        run: |
+          sleep 5
+          if pm2 list | grep -q "starlight-dev.*online"; then
+            echo "✅ Development server deployed successfully"
+            echo "🌐 Server should be available at http://localhost:4321"
+          else
+            echo "❌ Development deployment failed"
+            pm2 logs starlight-dev --lines 10
+            exit 1
+          fi
