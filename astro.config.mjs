@@ -11,6 +11,26 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My DnD Academia',
+			head: [
+				// WowHead tooltip configuration
+				{
+					tag: 'script',
+					content: `
+            const whTooltips = {
+              colorLinks: true,
+              iconizeLinks: true,
+              renameLinks: true
+            };
+          `
+				},
+				// WowHead tooltip script
+				{
+					tag: 'script',
+					attrs: {
+						src: 'https://wow.zamimg.com/js/tooltips.js'
+					}
+				}
+			],
 			customCss: [
 				// Relative path to your custom CSS file
 				'./src/styles/custom.css',
