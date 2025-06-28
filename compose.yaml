@@ -4,9 +4,7 @@ services:
     container_name: starlight-dev
     ports:
       - "4321:4321"
-    volumes:
-      - .:/app
-    working_dir: /app
+    # No volumes - just use what's in the image
     restart: unless-stopped
     environment:
       - NODE_ENV=development
