@@ -28,7 +28,7 @@ jobs:
       - name: Stop and remove containers
         run: |
           echo "🛑 Stopping containers..."
-          docker-compose down
+          docker compose down
 
           # Also stop any containers that might be running outside compose
           docker stop starlight-dev 2>/dev/null || true
