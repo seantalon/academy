@@ -4,7 +4,7 @@ description: "A comprehensive guide to defeating the eldritch boss Zorbulon the 
 sidebar:
   label: Zorbulon the Purpler
   order: 9
-  badge: 
+  badge:
     text: "Raid Boss"
     variant: "danger"
 tableOfContents:
@@ -14,12 +14,24 @@ editUrl: false
 lastUpdated: false
 ---
 
-import { Card, CardGrid, Tabs, TabItem, Badge, Steps, Aside, Icon, FileTree, LinkCard, Code } from '@astrojs/starlight/components';
+import {
+  Card,
+  CardGrid,
+  Tabs,
+  TabItem,
+  Badge,
+  Steps,
+  Aside,
+  Icon,
+  FileTree,
+  LinkCard,
+  Code,
+} from "@astrojs/starlight/components";
 
 # Zorbulon the Purpler - Eldritch Raid BAWSS
 
-zorbulon wears <a href="https://www.wowhead.com/item=31015"></a>   
-he also has a [](https://www.wowhead.com/spell=278350/vile-taint)   
+zorbulon wears <a href="https://www.wowhead.com/item=31015"></a>  
+he might [](https://www.wowhead.com/spell=436358/demolish) a burger  
 or else he might https://www.wowhead.com/spell=118038/die-by-the-sword
 
 <CardGrid>
@@ -50,10 +62,8 @@ Zorbulon punishes poor positioning heavily. Assign clear safe zones and practice
 **Recommended Composition:** 2 tanks, 4-6 healers, 12-14 DPS
 
 <Aside type="caution" title="Prerequisites">
-- Minimum level 85
-- Completed "The Purple Prophecy" questline  
-- At least 8 players (recommended 12-20)
-- Purple Resistance gear recommended
+  - Minimum level 85 - Completed "The Purple Prophecy" questline - At least 8
+  players (recommended 12-20) - Purple Resistance gear recommended
 </Aside>
 
 ## Core Abilities
@@ -67,17 +77,13 @@ Zorbulon punishes poor positioning heavily. Assign clear safe zones and practice
 </Card>
 
 <Card title="Purple Rain" icon="rocket">
-**Duration:** 8 seconds  
-**Effect:** Randomly targets areas with purple meteors  
-**Damage:** Lethal if standing in impact zones  
-**Radius:** 8-yard impact zones
+  **Duration:** 8 seconds **Effect:** Randomly targets areas with purple meteors
+  **Damage:** Lethal if standing in impact zones **Radius:** 8-yard impact zones
 </Card>
 
 <Card title="Mind Rend" icon="star">
-**Target:** Random player  
-**Effect:** Mind control for 6 seconds  
-**Counter:** Other players must break line of sight  
-**Frequency:** Every 30 seconds
+  **Target:** Random player **Effect:** Mind control for 6 seconds **Counter:**
+  Other players must break line of sight **Frequency:** Every 30 seconds
 </Card>
 
 <Card title="Tentacle Slam" icon="approve-check">
@@ -100,7 +106,7 @@ Zorbulon begins the fight in a relatively docile state but becomes increasingly 
 **Key Mechanics:**
 
 - **Void Pulse** every 15 seconds
-- **Purple Rain** every 45 seconds  
+- **Purple Rain** every 45 seconds
 - **Mind Rend** on random players every 30 seconds
 - **Tentacle Slam** on tanks every 20 seconds
 
@@ -160,16 +166,11 @@ Zorbulon attempts to merge with the void, becoming increasingly unstable.
 ## Positioning Strategy
 
 <FileTree>
-- Violet Sanctum/
-  - **Boss Arena** Main fighting area
-    - Entrance/ From Crystalline Caverns
-    - Safe Zone A/ Purple Rain refuge
-    - Safe Zone B/ Alternative safe spot
-    - Crystal Pillars/ Line-of-sight breaks
-      - North Crystal *Always available*
-      - South Crystal *Phase 2+ only*
-    - Altar Platform/ Final phase positioning
-    - .../ *Additional areas unlock in Phase 3*
+  - Violet Sanctum/ - **Boss Arena** Main fighting area - Entrance/ From
+  Crystalline Caverns - Safe Zone A/ Purple Rain refuge - Safe Zone B/
+  Alternative safe spot - Crystal Pillars/ Line-of-sight breaks - North Crystal
+  *Always available* - South Crystal *Phase 2+ only* - Altar Platform/ Final
+  phase positioning - .../ *Additional areas unlock in Phase 3*
 </FileTree>
 
 **Key Positioning Notes:**
@@ -187,10 +188,10 @@ Zorbulon attempts to merge with the void, becoming increasingly unstable.
 ### Tank Responsibilities
 
 <Steps>
-1. **Tentacle Slam Management** - Taunt swap after each slam
-2. **Positioning** - Keep boss near crystals for LoS breaks
-3. **Cooldown Usage** - Use defensives before slams, not after
-4. **Communication** - Call out taunt swaps clearly
+  1. **Tentacle Slam Management** - Taunt swap after each slam 2.
+  **Positioning** - Keep boss near crystals for LoS breaks 3. **Cooldown Usage**
+  - Use defensives before slams, not after 4. **Communication** - Call out taunt
+  swaps clearly
 </Steps>
 
 :::caution[Tank Warning]
@@ -204,12 +205,14 @@ Use defensive cooldowns before Tentacle Slam, not after. The knockback and stun 
 ### Healing Strategy
 
 **Priority Order:**
+
 1. Tank healing during Tentacle Slams
 2. Dispelling Void Touched debuffs
 3. Raid healing for Void Pulse
 4. Emergency healing for Crystal Prison victims
 
 **Cooldown Usage:**
+
 - **Phase 1:** Conserve major cooldowns
 - **Phase 2:** Use cooldowns for add phases
 - **Phase 3:** Rotate all major healing cooldowns
@@ -225,15 +228,18 @@ Keep HoTs running during high-damage phases and save dispels specifically for Vo
 ### DPS Priorities
 
 **Phase 1:**
+
 - Primary: Boss damage
 - Secondary: Breaking Crystal Prisons when they appear
 
 **Phase 2:**
+
 - <Badge text="1" variant="danger" /> Crystal Prisons (immediate break)
 - <Badge text="2" variant="caution" /> Void Spawn adds from rifts
 - <Badge text="3" variant="note" /> Boss damage
 
 **Phase 3:**
+
 - Save burst cooldowns for this phase
 - Focus boss while avoiding Reality Collapse
 - Use movement abilities wisely
@@ -256,17 +262,15 @@ Save burst cooldowns for Crystal Prison breaks - trapped players take increasing
 </Card>
 
 <Card title="Mantle of Purple Dominion" icon="rocket">
-**Type:** Shoulders  
-**Item Level:** 380  
-**Special:** Immunity to mind control effects  
-<Badge text="All Classes" variant="success" />
+  **Type:** Shoulders **Item Level:** 380 **Special:** Immunity to mind control
+  effects
+  <Badge text="All Classes" variant="success" />
 </Card>
 
 <Card title="Eldritch Tentacle Whip" icon="warning">
-**Type:** Weapon  
-**Item Level:** 385  
-**Special:** Chance to stun on critical hits  
-<Badge text="Melee DPS" variant="tip" />
+  **Type:** Weapon **Item Level:** 385 **Special:** Chance to stun on critical
+  hits
+  <Badge text="Melee DPS" variant="tip" />
 </Card>
 
 <Card title="Crystalline Heart of the Void" icon="star">
@@ -287,15 +291,13 @@ These will one-shot most players
 </Card>
 
 <Card title="Mind Rend Failures" icon="warning">
-<Badge text="WIPE POTENTIAL" variant="danger" /> Not breaking line of sight  
-Controlled players will kill others  
-**Use crystals and pillars for LoS**
+  <Badge text="WIPE POTENTIAL" variant="danger" /> Not breaking line of sight
+  Controlled players will kill others **Use crystals and pillars for LoS**
 </Card>
 
 <Card title="Crystal Prison Priority" icon="warning">
-<Badge text="CRITICAL" variant="caution" /> Poor priority on breaking prisons  
-Trapped players take increasing damage  
-**Assign dedicated DPS immediately**
+  <Badge text="CRITICAL" variant="caution" /> Poor priority on breaking prisons
+  Trapped players take increasing damage **Assign dedicated DPS immediately**
 </Card>
 
 <Card title="Phase 3 Panic" icon="warning">
@@ -313,10 +315,9 @@ Reality Collapse zones are permanent
 ### Essential Commands
 
 <Steps>
-1. **"Void Pulse incoming - spread for healing!"**
-2. **"Purple Rain - move to safe zones!"**
-3. **"Mind Rend on [player] - break LoS now!"**
-4. **"Tentacle Slam - tanks swap!"**
+  1. **"Void Pulse incoming - spread for healing!"** 2. **"Purple Rain - move to
+  safe zones!"** 3. **"Mind Rend on [player] - break LoS now!"** 4. **"Tentacle
+  Slam - tanks swap!"**
 </Steps>
 
 </TabItem>
@@ -349,16 +350,19 @@ Reality Collapse zones are permanent
 <Aside type="tip" title="Pro Strategies">
 
 **Preparation:**
+
 - Mark safe zones with world markers before pull
 - Assign Crystal Prison breakers by group
 - Practice movement patterns during breaks
 
 **Execution:**
+
 - Use voice countdown for important mechanics
-- Keep communication clear and concise  
+- Keep communication clear and concise
 - Save battle resurrections for Phase 3
 
 **Positioning:**
+
 - Always stay near line-of-sight breaks
 - Pre-position for known mechanics
 - Keep escape routes planned
@@ -368,17 +372,17 @@ Reality Collapse zones are permanent
 ### Recommended Addons
 
 <Steps>
-1. **WeakAuras** - Track debuffs and important timers
-2. **DBM/BigWigs** - Essential for ability warnings
-3. **Details!** - Monitor positioning and damage patterns  
-4. **Method Raid Tools** - Coordinate assignments and cooldowns
+  1. **WeakAuras** - Track debuffs and important timers 2. **DBM/BigWigs** -
+  Essential for ability warnings 3. **Details!** - Monitor positioning and
+  damage patterns 4. **Method Raid Tools** - Coordinate assignments and
+  cooldowns
 </Steps>
 
 ### Useful WeakAura Configuration
 
-<Code 
-  lang="yaml" 
-  title="Zorbulon Tank Swap WeakAura Config" 
+<Code
+  lang="yaml"
+  title="Zorbulon Tank Swap WeakAura Config"
   frame="terminal"
   code={`name: "Zorbulon Tank Swap"
 type: "aurabar"
@@ -395,21 +399,21 @@ actions:
 ## Related Guides
 
 <CardGrid>
-<LinkCard 
-  title="Void Magic Resistance Guide" 
-  description="Learn how to gear up for purple damage encounters"
-  href="#void-resistance"
-/>
-<LinkCard 
-  title="Eldritch Encounters Overview" 
-  description="Complete list of otherworldly bosses in the Crystalline Caverns"
-  href="#eldritch-bosses"
-/>
-<LinkCard 
-  title="Advanced Positioning Tactics" 
-  description="Master movement and positioning for complex raid encounters"
-  href="#positioning-guide"
-/>
+  <LinkCard
+    title="Void Magic Resistance Guide"
+    description="Learn how to gear up for purple damage encounters"
+    href="#void-resistance"
+  />
+  <LinkCard
+    title="Eldritch Encounters Overview"
+    description="Complete list of otherworldly bosses in the Crystalline Caverns"
+    href="#eldritch-bosses"
+  />
+  <LinkCard
+    title="Advanced Positioning Tactics"
+    description="Master movement and positioning for complex raid encounters"
+    href="#positioning-guide"
+  />
 </CardGrid>
 
 ## Conclusion
@@ -417,11 +421,13 @@ actions:
 Zorbulon the Purpler rewards coordination, positioning awareness, and mechanical execution. The key to success is respecting the timers, communicating clearly, and maintaining good positioning throughout all three phases.
 
 <Aside type="note" title="Final Thoughts">
-Remember: Practice makes perfect. Don't get discouraged if your first attempts don't succeed. Zorbulon has defeated many raids - learn from each attempt and adapt your strategy!
+  Remember: Practice makes perfect. Don't get discouraged if your first attempts
+  don't succeed. Zorbulon has defeated many raids - learn from each attempt and
+  adapt your strategy!
 </Aside>
 
 **Loot:** <Badge text="ilvl 385-390" variant="tip" /> • **Achievement:** <Badge text="Void Walker" variant="success" /> • **Title:** <Badge text="the Void-Touched" variant="note" />
 
 ---
 
-*May the void be with you, but not too closely.* <Icon name="star" />
+_May the void be with you, but not too closely._ <Icon name="star" />
