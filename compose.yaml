@@ -4,8 +4,15 @@ services:
     container_name: starlight-dev
     ports:
       - "4321:4321"
-    # No volumes - just use what's in the image
+    volumes:
+      - .:/app
+      - /app/node_modules  # Anonymous volume
+      - /app/.astro        # Anonymous volume
+      - /app/dist          # Anonymous volume
+    working_dir: /app
     restart: unless-stopped
     environment:
       - NODE_ENV=development
       - PORT=4321
+
+# No volumes section needed with anonymous volumes
