@@ -23,7 +23,7 @@ jobs:
 
       - name: Stop existing container
         run: |
-          docker-compose down || true
+          docker compose down || true
 
       - name: Build and deploy
         run: |
