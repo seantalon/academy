@@ -28,7 +28,8 @@ export default defineConfig({
 								autogenerate: { directory: 'undermine' },
 							},
 							{
-								label: 'MANAFORGE THINGY',
+								label: 'Manforge Omega',
+								badge: 'new',
 								autogenerate: { directory: 'manaforge' },
 							}],
 						},
