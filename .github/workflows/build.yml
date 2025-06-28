@@ -1,0 +1,35 @@
+# .github/workflows/build.yml
+name: Build Starlight
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build -t starlight-dev:latest .
+          docker build -t starlight-dev:${{ github.sha }} .
+
+      - name: Test build
+        run: |
+          # Test that the image was built successfully
+          docker images | grep starlight-dev
+
+      - name: Cleanup old images (optional)
+        run: |
+          # Remove dangling images to save space
+          docker image prune -f

@@ -1,0 +1,84 @@
+# .github/workflows/destroy.yml
+name: Stop and Destroy Starlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      cleanup_level:
+        description: "Cleanup level"
+        required: true
+        default: "container"
+        type: choice
+        options:
+          - container
+          - images
+          - everything
+
+permissions:
+  contents: read
+
+jobs:
+  destroy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Stop and remove containers
+        run: |
+          echo "🛑 Stopping containers..."
+          docker-compose down
+
+          # Also stop any containers that might be running outside compose
+          docker stop starlight-dev 2>/dev/null || true
+          docker rm starlight-dev 2>/dev/null || true
+
+      - name: Remove images (if selected)
+        if: ${{ github.event.inputs.cleanup_level == 'images' || github.event.inputs.cleanup_level == 'everything' }}
+        run: |
+          echo "🗑️ Removing starlight images..."
+          docker rmi starlight-dev:latest 2>/dev/null || true
+          docker rmi $(docker images starlight-dev -q) 2>/dev/null || true
+
+      - name: Full cleanup (if selected)
+        if: ${{ github.event.inputs.cleanup_level == 'everything' }}
+        run: |
+          echo "🧹 Performing full cleanup..."
+
+          # Remove all unused containers
+          docker container prune -f
+
+          # Remove all unused images
+          docker image prune -a -f
+
+          # Remove all unused volumes
+          docker volume prune -f
+
+          # Remove all unused networks
+          docker network prune -f
+
+      - name: Verify cleanup
+        run: |
+          echo "📊 Current Docker status:"
+          echo ""
+          echo "Containers:"
+          docker ps -a
+          echo ""
+          echo "Images:"
+          docker images
+          echo ""
+          if [ "${{ github.event.inputs.cleanup_level }}" = "everything" ]; then
+            echo "Volumes:"
+            docker volume ls
+            echo ""
+            echo "Networks:"
+            docker network ls
+          fi
+
+          # Check if starlight container is gone
+          if ! docker ps -a --format "table {{.Names}}" | grep -q "^starlight-dev$"; then
+            echo "✅ Starlight container successfully removed"
+          else
+            echo "⚠️ Starlight container still exists"
+          fi

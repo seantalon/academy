@@ -1,0 +1,13 @@
+services:
+  starlight-dev:
+    build: .
+    container_name: starlight-dev
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - PORT=4321
