@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       force_rebuild:
-        description: "Force rebuild the image"
+        description: 'Force rebuild the image'
         required: false
         default: false
         type: boolean
@@ -23,7 +23,7 @@ jobs:
 
       - name: Stop existing container
         run: |
-          docker compose down || true
+          docker-compose down || true
 
       - name: Build and deploy
         run: |
@@ -32,7 +32,7 @@ jobs:
             docker compose up -d --build --force-recreate
           else
             echo "🚀 Deploying with existing image..."
-            docker compose up -d --build
+            docker compose up -d
           fi
 
       - name: Wait for container to start
@@ -42,19 +42,19 @@ jobs:
 
       - name: Verify deployment
         run: |
-          if docker compose ps starlight-dev | grep -q "Up"; then
+          if docker-compose ps starlight-dev | grep -q "Up"; then
             echo "✅ Development server deployed successfully"
             echo "🌐 Server should be available at http://localhost:4321"
             echo ""
             echo "📊 Container Status:"
-            docker compose ps
+            docker-compose ps
             echo ""
             echo "📝 Recent logs:"
-            docker compose logs --tail 20
+            docker-compose logs --tail 20
           else
             echo "❌ Development deployment failed"
             echo "📝 Container logs:"
-            docker compose logs starlight-dev
+            docker-compose logs starlight-dev
             exit 1
           fi
 
@@ -69,7 +69,7 @@ jobs:
             echo "⏳ Attempt $i/10 - waiting for server..."
             sleep 5
           done
-
+          
           # Final check
           if ! curl -f http://localhost:4321 >/dev/null 2>&1; then
             echo "❌ Health check failed after 10 attempts"
