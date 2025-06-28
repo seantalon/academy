@@ -29,10 +29,10 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.force_rebuild }}" = "true" ]; then
             echo "🔨 Force rebuilding image..."
-            docker-compose up -d --build --force-recreate
+            docker compose up -d --build --force-recreate
           else
             echo "🚀 Deploying with existing image..."
-            docker-compose up -d --build
+            docker compose up -d --build
           fi
 
       - name: Wait for container to start
@@ -42,19 +42,19 @@ jobs:
 
       - name: Verify deployment
         run: |
-          if docker-compose ps starlight-dev | grep -q "Up"; then
+          if docker compose ps starlight-dev | grep -q "Up"; then
             echo "✅ Development server deployed successfully"
             echo "🌐 Server should be available at http://localhost:4321"
             echo ""
             echo "📊 Container Status:"
-            docker-compose ps
+            docker compose ps
             echo ""
             echo "📝 Recent logs:"
-            docker-compose logs --tail 20
+            docker compose logs --tail 20
           else
             echo "❌ Development deployment failed"
             echo "📝 Container logs:"
-            docker-compose logs starlight-dev
+            docker compose logs starlight-dev
             exit 1
           fi
 
