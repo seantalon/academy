@@ -1,0 +1,77 @@
+# .github/workflows/deploy.yml
+name: Deploy Starlight Development
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: "Force rebuild the image"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Stop existing container
+        run: |
+          docker-compose down || true
+
+      - name: Build and deploy
+        run: |
+          if [ "${{ github.event.inputs.force_rebuild }}" = "true" ]; then
+            echo "🔨 Force rebuilding image..."
+            docker-compose up -d --build --force-recreate
+          else
+            echo "🚀 Deploying with existing image..."
+            docker-compose up -d --build
+          fi
+
+      - name: Wait for container to start
+        run: |
+          echo "⏳ Waiting for container to start..."
+          sleep 10
+
+      - name: Verify deployment
+        run: |
+          if docker-compose ps starlight-dev | grep -q "Up"; then
+            echo "✅ Development server deployed successfully"
+            echo "🌐 Server should be available at http://localhost:4321"
+            echo ""
+            echo "📊 Container Status:"
+            docker-compose ps
+            echo ""
+            echo "📝 Recent logs:"
+            docker-compose logs --tail 20
+          else
+            echo "❌ Development deployment failed"
+            echo "📝 Container logs:"
+            docker-compose logs starlight-dev
+            exit 1
+          fi
+
+      - name: Health check
+        run: |
+          echo "🔍 Performing health check..."
+          for i in {1..10}; do
+            if curl -f http://localhost:4321 >/dev/null 2>&1; then
+              echo "✅ Health check passed - server is responding"
+              break
+            fi
+            echo "⏳ Attempt $i/10 - waiting for server..."
+            sleep 5
+          done
+
+          # Final check
+          if ! curl -f http://localhost:4321 >/dev/null 2>&1; then
+            echo "❌ Health check failed after 10 attempts"
+            exit 1
+          fi
