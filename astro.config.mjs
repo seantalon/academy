@@ -4,6 +4,10 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	server: {
+		host: true,
+		allowedHosts: ['academy.avaren.dev']  // Add your tunnel domain
+	},
 	integrations: [
 		starlight({
 			title: 'My DnD Academia',
@@ -22,6 +26,10 @@ export default defineConfig({
 							label: 'Raids', items: [{
 								label: 'Liberation of Undermine',
 								autogenerate: { directory: 'undermine' },
+							},
+						{
+								label: 'MANAFORGE THINGY',
+								autogenerate: { directory: 'manaforge' },
 							}],
 						},
 
