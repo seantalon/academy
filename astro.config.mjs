@@ -10,15 +10,15 @@ export default defineConfig({
 	},
 	integrations: [
 		starlight({
-			title: 'My DnD Academia',
+			title: 'DnD Academy',
 			head: [
 				// WowHead tooltip configuration
 				{
 					tag: 'script',
 					content: `
             const whTooltips = {
-              colorLinks: true,
-              iconizeLinks: true,
+              colorLinks: false,
+              iconizeLinks: false,
               renameLinks: true
             };
           `
@@ -41,7 +41,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/zorbulon' },
+						{ label: 'Contribution', autogenerate: { directory: 'guides/contribution' } },
 						{
 							label: 'Raids', items: [{
 								label: 'Liberation of Undermine',

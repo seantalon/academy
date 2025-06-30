@@ -6,13 +6,11 @@ services:
       - "4321:4321"
     volumes:
       - .:/app
-      - /app/node_modules  # Anonymous volume
-      - /app/.astro        # Anonymous volume
-      - /app/dist          # Anonymous volume
+      - /app/node_modules
+      - /app/.astro
+      - /app/dist
     working_dir: /app
     restart: unless-stopped
     environment:
       - NODE_ENV=development
       - PORT=4321
-
-# No volumes section needed with anonymous volumes
